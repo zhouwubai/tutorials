@@ -8,7 +8,7 @@ MyClass::MyClass(int a, int b)
   cout<<"Coustructor"<<endl;
   cout<<regVar<<endl;
   cout<<constVar<<endl;
-}
+} // no ; is needed
 
 MyClass::~MyClass(){
   cout<<"Destructor"<<endl;
@@ -73,3 +73,51 @@ Overrider Overrider::operator+(Overrider obj)  // &obj or obj
 
 }
 */
+
+
+
+//inheritance
+Mother::Mother()
+{
+  cout<<"Mother Constructor"<<endl;
+}
+
+Mother::~Mother()
+{
+  cout<<"Mother Destructor"<<endl;
+}
+
+void Mother::sayHi()
+{
+  cout<<"Hi"<<endl;
+}
+
+
+Daughter::Daughter()
+{
+  cout<<"Daughter Constructor"<<endl;
+}
+
+Daughter::~Daughter()
+{
+  cout<<"Daughter Destructor"<<endl;
+}
+
+
+
+//Polymorphism
+void Enemy::setAttackPower(int a)
+{
+  attackPower = a;
+}
+
+void Ninja::attack()
+{
+  cout<<"Ninja attack - "<<attackPower<<endl;
+}
+
+
+void Monster::attack()
+{
+  cout<<"Monster attack - "<<attackPower<<endl;
+}

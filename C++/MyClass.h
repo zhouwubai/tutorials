@@ -55,4 +55,41 @@ public:
 };
 
 
+
+//inheritance
+class Mother{
+public:
+  Mother();
+  ~Mother();
+  void sayHi();
+private:
+};
+
+
+class Daughter: public Mother{
+public:
+  Daughter();
+  ~Daughter();
+};
+
+
+//Polymorphism
+
+class Enemy{
+protected:
+  int attackPower;
+public:
+  void setAttackPower(int a);
+};
+
+class Ninja: public Enemy{
+public:
+  void attack();
+};
+
+class Monster: public Enemy{
+public:
+  void attack();
+};
+
 #endif // MYCLASS_H

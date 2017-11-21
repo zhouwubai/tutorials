@@ -47,4 +47,23 @@ int main(){
   Overrider res = over1 + over2;
   cout<<res.var<<endl;
 
+
+  // Inheritance
+  cout << "\n=====Inheritance=====\n"<<endl;
+  Daughter daughter;
+  daughter.sayHi();
+
+
+  // Polymorphism
+  cout << "\n=====Polymorphism=====\n"<<endl;
+  Ninja ninja;
+  Monster monster;
+  Enemy *e1 = &ninja;
+  Enemy *e2 = &monster;
+
+  e1->setAttackPower(5);
+  e2->setAttackPower(55);
+
+  ninja.attack(); //e1->attack() is not working, abstract function comes here
+  monster.attack();
 }
