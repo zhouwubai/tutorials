@@ -37,3 +37,16 @@ C++ polymorphism means that a call to a member function will cause a different i
 Simply, polymorphism means that a single function can have a number of different implementations.
 
 
+# Templates, Exceptions, Files
+
+template <class T>
+T sum(T a, T b)
+{
+  return a+b;
+}
+
+When creating a template type parameter, the keyword typename may be used as an alternative to the keyword class: template <typename T>.
+In this context, the keywords are identical, but throughout this course, we'll use the keyword class
+
+
+

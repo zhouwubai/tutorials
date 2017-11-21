@@ -116,4 +116,38 @@ public:
 };
 
 
+
+//Template
+template <class T>
+class Pair{
+private:
+  T first, second;
+public:
+  Pair(T a, T b)
+  :first(a), second(b)
+  {
+  }
+  T bigger();  // check how to implement in source files
+};
+
+
+
+//template specialization
+template <class T>
+class TemplateSpec {
+ public:
+  TemplateSpec (T x) {
+   cout <<x<<" -  not a char"<<endl;
+  }
+};
+
+template <>
+class TemplateSpec<char> {
+ public:
+  TemplateSpec (char x) {
+   cout <<x<<" is a char!"<<endl;
+  }
+};
+
+
 #endif // MYCLASS_H

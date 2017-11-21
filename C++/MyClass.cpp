@@ -143,3 +143,11 @@ void VirtualMonster::attack()
 {
   cout<<"Monster attack - "<<attackPower<<endl;
 }
+
+
+// templates
+template <class T>  // Can not be omitted
+T Pair<T>::bigger()
+{
+  return (first > second? first:second);
+}

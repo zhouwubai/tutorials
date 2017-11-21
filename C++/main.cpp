@@ -3,6 +3,26 @@
 #include "MyClass.cpp"
 using namespace std;
 
+int sum(int a, int b)
+{
+  return a + b;
+}
+
+
+template <class T>
+T sum(T a, T b)
+{
+  return a+b;
+}
+
+
+template <class T, class U>
+T smaller(T a, U b) //return value are type T, so it might convert U to T
+{
+  return (a < b? a:b);
+}
+
+
 int main(){
 
   // pointer, dynamic memory
@@ -83,4 +103,19 @@ int main(){
   vE1->attack();
   vE2->attack();
   vE3->attack();
+
+  cout << "\n=====Templates, Exceptions, Files=====\n"<<endl;
+  cout <<sum(3, 4)<<endl;
+  cout <<sum(3.4, 5.9)<<endl;
+  cout <<smaller(3, 4.1)<<endl;
+
+  Pair<int> pair1(11, 12);
+  cout<<pair1.bigger()<<endl;
+  Pair<double> pair2(23.43, 5.68);
+  cout<<pair2.bigger()<<endl;
+
+  TemplateSpec<int> tSpec1(12);
+  TemplateSpec<double> tSpec2(12.12);
+  TemplateSpec<char> tSpec3('s');
+
 }
