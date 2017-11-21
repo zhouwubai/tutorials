@@ -48,5 +48,32 @@ T sum(T a, T b)
 When creating a template type parameter, the keyword typename may be used as an alternative to the keyword class: template <typename T>.
 In this context, the keywords are identical, but throughout this course, we'll use the keyword class
 
+ try {
+  int num1;
+  cout <<"Enter the first number:";
+  cin >> num1;
 
+  int num2;
+  cout <<"Enter the second number:";
+  cin >> num2;
+
+  if(num2 == 0) {
+   throw 0;
+  }
+
+  cout <<"Result:"<<num1 / num2;
+ }
+ catch(int x) {
+  cout <<"Division by zero!";
+ }
+
+In our case, we catch exceptions of type integer only. It's possible to specify that your catch block handles any type of exception thrown in a try block.
+To accomplish this, add an ellipsis (...)
+
+try{
+
+}
+catch(...){ //catch everything
+
+}
 
