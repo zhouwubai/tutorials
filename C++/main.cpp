@@ -64,6 +64,23 @@ int main(){
   e1->setAttackPower(5);
   e2->setAttackPower(55);
 
-  ninja.attack(); //e1->attack() is not working, abstract function comes here
+  ninja.attack(); //e1->attack() is not working, virtual function comes here
   monster.attack();
+
+  cout << "\n=====Virtual Function=====\n"<<endl;
+  VirtualNinja vNinja;
+  VirtualMonster vMonster;
+  VirtualEnemy vEnemy; // abstract class with pure virtual function can not do this.
+
+  VirtualEnemy *vE1 = &vNinja;
+  VirtualEnemy *vE2 = &vMonster;
+  VirtualEnemy *vE3 = &vEnemy;
+
+  vE1->setAttackPower(5);
+  vE2->setAttackPower(55);
+  vE3->setAttackPower(555);
+
+  vE1->attack();
+  vE2->attack();
+  vE3->attack();
 }

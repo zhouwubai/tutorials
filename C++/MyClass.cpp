@@ -121,3 +121,25 @@ void Monster::attack()
 {
   cout<<"Monster attack - "<<attackPower<<endl;
 }
+
+
+void VirtualEnemy::setAttackPower(int a)
+{
+  attackPower = a;
+}
+
+void VirtualEnemy::attack(){
+  cout<<"Enemy attack - "<<attackPower<<endl;
+}
+
+
+void VirtualNinja::attack()
+{
+  cout<<"Ninja attack - "<<attackPower<<endl;
+}
+
+
+void VirtualMonster::attack()
+{
+  cout<<"Monster attack - "<<attackPower<<endl;
+}

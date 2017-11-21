@@ -73,8 +73,7 @@ public:
 };
 
 
-//Polymorphism
-
+//Polymorphism, virtual function
 class Enemy{
 protected:
   int attackPower;
@@ -91,5 +90,30 @@ class Monster: public Enemy{
 public:
   void attack();
 };
+
+
+class VirtualEnemy{
+protected:
+  int attackPower;
+public:
+  void setAttackPower(int a);
+  /* {} can not be omitted, declaration and definition
+     but a pure virtual function (no function body) can be defined as virtual void attack() = 0;
+     A base class with pure virtual function are called abstract classes that can not been instantiated.
+     Classes derived from a base class with pure virtual function must implement the pure virutal function;
+  */
+  virtual void attack();
+};
+
+class VirtualNinja: public VirtualEnemy{
+public:
+  void attack();  // declaration here can not be omitted
+};
+
+class VirtualMonster: public VirtualEnemy{
+public:
+  void attack();
+};
+
 
 #endif // MYCLASS_H
