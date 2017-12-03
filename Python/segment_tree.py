@@ -48,6 +48,7 @@ def getSum(root, start, end):
     if start > root.interval.end or end < root.interval.start:
         return 0
 
+    # be careful here
     mid = (root.interval.start + root.interval.end) / 2
     if mid < start:
         return getSum(root.right, start, end)
