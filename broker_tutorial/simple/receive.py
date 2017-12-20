@@ -1,3 +1,5 @@
+# part 1
+
 import pika
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
