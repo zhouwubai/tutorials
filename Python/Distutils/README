@@ -1,0 +1,22 @@
+Tutorial website
+https://wiki.python.org/moin/Distutils/Tutorial
+
+https://docs.python.org/3/distutils/index.html
+Use `python setup.py --help-commands` to check the docs
+
+python setup.py sdist
+python setup.py install
+
+* runner becomes a binary file
+but emitting errors
+
+```bash
+line 7: import: command not found
+line 10: syntax error: unexpected end of file
+```
+* ** put `#! python` on the first line of script, it works
+
+**ipython**
+from package.module import *
+determine_path()
+start()
