@@ -34,3 +34,7 @@
 # build
 build/
 __pycache__/
+
+# env
+env/
+tfenv/
